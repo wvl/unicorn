@@ -58,6 +58,7 @@ opts = OptionParser.new("", 24, '  ') do |opts|
 
   opts.on("-E", "--env ENVIRONMENT",
           "use ENVIRONMENT for defaults (default: development)") do |e|
+    ENV['RACK_ENV'] = e
     env = e
   end
 
